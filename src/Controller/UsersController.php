@@ -16,7 +16,7 @@ class UsersController extends AppController
     {
         parent::beforeFilter($event);
 
-        $this->Authentication->allowUnauthenticated(['login', 'add', 'view']);
+        $this->Authentication->allowUnauthenticated(['login', 'add']);
     }
     /**
      * Index method
@@ -115,8 +115,11 @@ class UsersController extends AppController
         $result = $this->Authentication->getResult();
         // Si l'utilisateur est connecté, le renvoyer ailleurs
         if ($result->isValid()) {
-            $target = $this->Authentication->getLoginRedirect() ?? '/home';
-            return $this->redirect($target);
+            $redirect = $this->request->getQuery('redirect', [
+                'controller' => 'Pages',
+                'action' => 'home',
+              ]);
+              return $this->redirect($redirect);
         }
         if ($this->request->is('post') && !$result->isValid()) {
             $this->Flash->error('Identifiant ou mot de passe invalide');

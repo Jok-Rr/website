@@ -1,5 +1,4 @@
 <?php
-
 declare(strict_types=1);
 
 namespace App\Model\Entity;
@@ -11,10 +10,11 @@ use Cake\ORM\Entity;
  * User Entity
  *
  * @property int $id
- * @property string $email
+ * @property string $login
  * @property string $password
  * @property \Cake\I18n\FrozenTime|null $created
  * @property \Cake\I18n\FrozenTime|null $modified
+ * @property string $level
  *
  * @property \App\Model\Entity\Project[] $projects
  */
@@ -30,10 +30,11 @@ class User extends Entity
      * @var array
      */
     protected $_accessible = [
-        'email' => true,
+        'login' => true,
         'password' => true,
         'created' => true,
         'modified' => true,
+        'level' => true,
         'projects' => true,
     ];
 
@@ -46,10 +47,9 @@ class User extends Entity
         'password',
     ];
 
-    protected function _setPassword(string $password): ?string
+    protected function _setPassword(string $password)
     {
-        if (strlen($password) > 0) {
-            return (new DefaultPasswordHasher())->hash($password);
-        }
+        $hasher = new DefaultPasswordHasher();
+        return $hasher->hash($password);
     }
 }

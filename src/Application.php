@@ -138,7 +138,7 @@ public function getAuthenticationService(ServerRequestInterface $request): Authe
     ]);
 
     $fields = [
-        IdentifierInterface::CREDENTIAL_USERNAME => 'email',
+        IdentifierInterface::CREDENTIAL_USERNAME => 'login',
         IdentifierInterface::CREDENTIAL_PASSWORD => 'password'
     ];
     // Chargez les authentificateurs. Session est censé figurer en premier.

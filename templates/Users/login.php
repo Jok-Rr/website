@@ -2,7 +2,7 @@
     <?= $this->Form->create() ?>
     <fieldset>
         <legend><?= __('Saisissez votre identifiant et votre mot de passe svp') ?></legend>
-        <?= $this->Form->control('email') ?>
+        <?= $this->Form->control('login') ?>
         <?= $this->Form->control('password') ?>
     </fieldset>
     <?= $this->Form->button(__('Login')); ?>

@@ -31,7 +31,6 @@ use Cake\Validation\Validator;
  */
 class UsersTable extends Table
 {
-    
     /**
      * Initialize method
      *
@@ -66,15 +65,22 @@ class UsersTable extends Table
             ->allowEmptyString('id', null, 'create');
 
         $validator
-            ->email('email')
-            ->requirePresence('email', 'create')
-            ->notEmptyString('email');
+            ->scalar('login')
+            ->maxLength('login', 255)
+            ->requirePresence('login', 'create')
+            ->notEmptyString('login');
 
         $validator
             ->scalar('password')
             ->maxLength('password', 255)
             ->requirePresence('password', 'create')
             ->notEmptyString('password');
+
+        $validator
+            ->scalar('level')
+            ->maxLength('level', 45)
+            ->requirePresence('level', 'create')
+            ->notEmptyString('level');
 
         return $validator;
     }
@@ -88,7 +94,7 @@ class UsersTable extends Table
      */
     public function buildRules(RulesChecker $rules): RulesChecker
     {
-        $rules->add($rules->isUnique(['email']), ['errorField' => 'email']);
+        $rules->add($rules->isUnique(['login']), ['errorField' => 'login']);
 
         return $rules;
     }

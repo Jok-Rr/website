@@ -37,13 +37,20 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 </head>
 <body>
     <nav class="top-nav">
-        <div class="top-nav-title">
-            <a href="<?= $this->Url->build('/') ?>"><span>Cake</span>PHP</a>
-        </div>
-        <div class="top-nav-links">
-            <a target="_blank" rel="noopener" href="https://book.cakephp.org/4/">Documentation</a>
-            <a target="_blank" rel="noopener" href="https://api.cakephp.org/">API</a>
-        </div>
+    <?php if($this->request->getAttribute('identity') == null){ ?>
+
+      <?= $this->Html->link('<i class="fas fa-user-plus" aria-hidden="true"></i>Inscription', ['controller' => 'Users', 'action' => 'new'], ['escape' => false, 'class' => ($this->templatePath == 'Users' && $this->template == 'new') ? 'active' : '']) ?>
+
+      <?= $this->Html->link('<i class="fas fa-lock" aria-hidden="true"></i>Connexion', ['controller' => 'Users', 'action' => 'login'], ['escape' => false, 'class' => ($this->templatePath == 'Users' && $this->template == 'login') ? 'active' : '']) ?>
+
+    <?php }else{
+        
+      if($this->request->getAttribute('identity')->level == 'admin' || $this->request->getAttribute('identity')->level == 'editor'){?>
+        <?= $this->Html->link('<i class="fas fa-plus" aria-hidden="true"></i>Ajouter un jeux', ['controller' => 'Games', 'action' => 'new'], ['escape' => false, 'class' => ($this->templatePath == 'Games' && $this->template == 'new') ? 'active' : '']) ?>
+      <?php } ?>
+      <?= $this->Html->link('<i class="fas fa-user" aria-hidden="true"></i>Mon profil', ['controller' => 'Users', 'action' => 'profil', $this->request->getAttribute('identity')->id], ['escape' => false, 'class' => ($this->templatePath == 'Users' && $this->template == 'profil') ? 'active' : '']) ?>
+      <?= $this->Html->link('<i class="fas fa-sign-out-alt" aria-hidden="true"></i>Déconnexion', ['controller' => 'Users', 'action' => 'logout'], ['escape' => false, 'class' => ($this->templatePath == 'Users' && $this->template == 'logout') ? 'active' : '']) ?>
+    <?php } ?>
     </nav>
     <main class="main">
         <div class="container">

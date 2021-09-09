@@ -19,12 +19,16 @@
             <h3><?= h($user->id) ?></h3>
             <table>
                 <tr>
-                    <th><?= __('Email') ?></th>
-                    <td><?= h($user->email) ?></td>
+                    <th><?= __('Login') ?></th>
+                    <td><?= h($user->login) ?></td>
                 </tr>
                 <tr>
                     <th><?= __('Password') ?></th>
                     <td><?= h($user->password) ?></td>
+                </tr>
+                <tr>
+                    <th><?= __('Level') ?></th>
+                    <td><?= h($user->level) ?></td>
                 </tr>
                 <tr>
                     <th><?= __('Id') ?></th>
