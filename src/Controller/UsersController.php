@@ -116,8 +116,8 @@ class UsersController extends AppController
         // Si l'utilisateur est connecté, le renvoyer ailleurs
         if ($result->isValid()) {
             $redirect = $this->request->getQuery('redirect', [
-                'controller' => 'Pages',
-                'action' => 'home',
+                'controller' => 'Projects',
+                'action' => 'index',
               ]);
               return $this->redirect($redirect);
         }
@@ -129,6 +129,6 @@ class UsersController extends AppController
     public function logout()
     {
         $this->Authentication->logout();
-        return $this->redirect(['controller' => 'Users', 'action' => 'login']);
+        return $this->redirect(['controller' => 'Projects', 'action' => 'index']);
     }
 }

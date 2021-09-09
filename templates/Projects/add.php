@@ -1,14 +1,19 @@
+<button onclick="history.go(-1);">Back </button>
 <h1>Ajouter un projet</h1>
 
 <?php
-  echo $this->Form->create($project);
-  echo $this->Form->control('user_id', ['type' => 'hidden', 'value' => '1']);
-  echo $this->Form->control('title');
-  echo $this->Form->control('body');
-  echo $this->Form->button('Ajouter le projet');
-  echo $this->Form->end();
 
-
-
-
- ?>
+echo $this->Form->create($project, ['enctype' => 'multipart/form-data']);
+echo $this->Form->control('title', ['label' => 'Titre']);
+echo $this->Form->control('body', ['label' => 'Informations sur le projet']); ?>
+<p>Publier le projet :</p>
+<?php echo $this->Form->radio(
+  'published',
+  [
+      ['value' => '1', 'text' => 'Oui'],
+      ['value' => '0', 'text' => 'Non'],
+  ]
+);
+echo $this->Form->control('poster', ['type' => 'file', 'label' => 'Image']);
+echo $this->Form->button('Ajouter le projet au site');
+echo $this->Form->end();

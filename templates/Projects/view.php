@@ -1,3 +1,4 @@
+
 <h1><?= h($project->title) ?></h1>
 <p><?= h($project->body) ?></p>
 <p><small>Crée le <?= h($project->created->format(DATE_RFC850)) ?></small></p>
