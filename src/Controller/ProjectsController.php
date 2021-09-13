@@ -13,7 +13,7 @@ class ProjectsController extends AppController
 
         $this->Authentication->allowUnauthenticated(['index']);
   }
-
+  
   public function index()
   {
     $this->loadComponent('Paginator');
@@ -75,6 +75,7 @@ class ProjectsController extends AppController
       $project->title = $this->request->getData('title');
       $project->body = $this->request->getData('body');
       $project->published = $this->request->getData('published');
+      $project->poster = $this->request->getData('poster');
 
       if (empty($this->request->getData('poster')->getClientFilename()) || !in_array($this->request->getData('poster')->getClientMediaType(), ['image/png', 'image/jpg', 'image/jpeg', 'image/gif'])) {
 

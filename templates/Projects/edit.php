@@ -1,3 +1,4 @@
+<button onclick="history.go(-1);">Back </button>
 <h1>Editer un projet</h1>
   <?php
   echo $this->Form->create($project, ['enctype' => 'multipart/form-data']);
@@ -16,7 +17,7 @@
   echo $this->Form->end();
 
 
-
+echo var_dump($project);
 
  ?>
 

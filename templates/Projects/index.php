@@ -2,11 +2,20 @@
 
 <?php foreach ($projects as $project) { ?>
   <article class="">
-  <figure>
-    <?= $this->Html->image('data/pictures/'.$project->poster, ['alt' => $project->title]) ?>
-  </figure>
-    <strong><?= $this->Html->link($project->title, ['action' => 'view', $project->slug]); ?></strong>
-    <p><?= $project->body?></p>
-    <p><?= $project->created->format(DATE_RFC850)?></p>
+    <div class="box-project">
+      <figure>
+        <?= $this->Html->image('data/pictures/' . $project->poster, ['alt' => $project->title]) ?>
+      </figure>
+      <div class="over-frame">
+        <a data-id="6" href="" class="">
+          <span>+</span>
+        </a>
+      </div>
+      <div class="text-box">
+        <strong><?= $this->Html->link($project->title, ['action' => 'view', $project->slug]); ?></strong>
+        <p class="text-left text-uppercase">
+          DÉVELOPPEMENT WEB </p>
+      </div>
+    </div>
   </article>
 <?php } ?>

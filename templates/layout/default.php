@@ -30,22 +30,29 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
   <?= $this->Html->meta('icon') ?>
 
   <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap">
 
-  <?= $this->Html->css(['normalize.min', 'milligram.min', 'cake']) ?>
-
+  <?= $this->Html->css(['main', 'normalize']) ?>
+  <?= $this->Html->script('jquery'); ?>
   <?= $this->fetch('meta') ?>
   <?= $this->fetch('css') ?>
   <?= $this->fetch('script') ?>
+
 </head>
+<script>
+
+</script>
 
 <body>
   <nav class="top-nav">
     <div class="top-nav-title">
-      <a href="<?= $this->Url->build('/') ?>"><span>Tom</span>Bost</a>
+      <figure>
+        <img  class="logo" src="img/data/logo-tb.svg" alt="">
+      </figure>
     </div>
     <div class="top-nav-links">
 
-    <?= $this->Html->link('<i class="fas fa-plus" aria-hidden="true"></i>Accueil', ['controller' => 'Projects', 'action' => 'index'], ['escape' => false, 'class' => ($this->templatePath == 'Projects' && $this->template == 'index') ? 'active' : '']) ?>
+      <?= $this->Html->link('<i class="fas fa-plus" aria-hidden="true"></i>Accueil', ['controller' => 'Projects', 'action' => 'index'], ['escape' => false, 'class' => ($this->templatePath == 'Projects' && $this->template == 'index') ? 'active' : '']) ?>
 
       <?php if ($this->request->getAttribute('identity') == null) { ?>
 
@@ -71,6 +78,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
   </main>
   <footer>
   </footer>
+
 </body>
 
 </html>
