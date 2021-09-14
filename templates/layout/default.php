@@ -47,7 +47,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
   <nav class="top-nav margin-center">
     <div class="top-nav-logo">
       <figure>
-        <img  class="logo" src="img/data/logo-tb.svg" alt="">
+        <img  class="logo" src="/img/data/logo-tb.svg" alt="">
       </figure>
     </div>
     <div class="top-nav-links">
@@ -78,9 +78,9 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
   </main>
   <footer>
     <figure>
-      <img  class="logo" src="img/data/logo-tb-white.svg" alt="">
+      <img  class="logo" src="/img/data/logo-tb-white.svg" alt="">
     </figure>
-    <p class="copyright">Company Name © 2018</p>
+    <p class="copyright">Tom Bost © September 2021</p>
   </footer>
 
 </body>
