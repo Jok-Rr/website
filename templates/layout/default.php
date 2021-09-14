@@ -44,8 +44,8 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 </script>
 
 <body>
-  <nav class="top-nav">
-    <div class="top-nav-title">
+  <nav class="top-nav margin-center">
+    <div class="top-nav-logo">
       <figure>
         <img  class="logo" src="img/data/logo-tb.svg" alt="">
       </figure>
@@ -59,15 +59,15 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         <?= $this->Html->link('<i class="fas fa-lock" aria-hidden="true"></i>Connexion', ['controller' => 'Users', 'action' => 'login'], ['escape' => false, 'class' => ($this->templatePath == 'Users' && $this->template == 'login') ? 'active' : '']) ?>
 
         <?php } else {
-
-        if ($this->request->getAttribute('identity')->level == 'admin') { ?>
+    if ($this->request->getAttribute('identity')->level == 'admin') { ?>
 
           <?= $this->Html->link('<i class="fas fa-plus" aria-hidden="true"></i>manager de projet', ['controller' => 'Projects', 'action' => 'manager'], ['escape' => false, 'class' => ($this->templatePath == 'Projects' && $this->template == 'manager') ? 'active' : '']) ?>
 
         <?php } ?>
 
         <?= $this->Html->link('<i class="fas fa-sign-out-alt" aria-hidden="true"></i>Déconnexion', ['controller' => 'Users', 'action' => 'logout'], ['escape' => false, 'class' => ($this->templatePath == 'Users' && $this->template == 'logout') ? 'active' : '']) ?>
-      <?php } ?>
+      <?php
+} ?>
     </div>
   </nav>
   <main class="main">
@@ -77,6 +77,10 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     </div>
   </main>
   <footer>
+    <figure>
+      <img  class="logo" src="img/data/logo-tb-white.svg" alt="">
+    </figure>
+    <p class="copyright">Company Name © 2018</p>
   </footer>
 
 </body>
