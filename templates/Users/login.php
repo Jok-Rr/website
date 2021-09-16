@@ -1,6 +1,6 @@
 <section class="login-page">
   <figure class="svg-bottom">
-    <img src="/img/data/mf-avatar.svg" alt="">
+    <img src="/img/data/my-avatar.svg" alt="">
   </figure>
   <h1>Le Back-End du porteFolio de Tom Bost</h1>
   <div class="login-section">

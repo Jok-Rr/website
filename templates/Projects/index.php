@@ -1,61 +1,84 @@
-<section class="profile margin-center">
-    <h1>Designer & Développeur Web Junior</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur.Lorem ipsum dolor sit amet.</p>
-    <figure class="svg-avatar">
-      <img src="img/data/mf-avatar.svg" alt="">
-    </figure>
-    <figure class="svg-bottom">
-      <img src="img/data/hero.svg" alt="">
-    </figure>
+<section class="profile">
+  <h1 class="">Designer & Développeur Web Junior</h1>
+  <p>Un développeur ne crie pas, il <strong>URL</strong>.</p>
+  <figure class="svg-avatar">
+    <img src="img/data/my-avatar.svg" alt="">
+  </figure>
+  <a href="#skills-section" class="mouse_scroll">
+
+		<div class="mouse">
+			<div class="wheel"></div>
+		</div>
+		<div>
+			<span class="m_scroll_arrows unu"></span>
+			<span class="m_scroll_arrows doi"></span>
+		</div>
+</a>
+  <figure class="svg-bottom">
+      <img src="img/data/wave-skills.svg" alt="">
+  </figure>
 </section>
-<section class="skills">
-  <div>
-    <h2>Lorem ipsum dolor sit amet, consectetur.</h2>
-    <p>Lorem ipsum dolor sit amet, consecteturLorem ipsum dolor sit amet, consecteturLorem ipsum dolor sit amet, consecteturLorem ipsum dolor sit amet, consecteturLorem ipsum dolor sit amet, consecteturLorem ipsum dolor sit amet, consecteturLorem ipsum dolor sit amet, consecteturLorem ipsum dolor sit amet, consecteturLorem ipsum dolor sit amet, consecteturLorem ipsum dolor sit amet, consectetur</p>
+<section id="skills-section" class="skills-section">
+  <div class="skills-content">
+    <h2>Hey, je m'appelle Tom, enchanté de te rencontrer.</h2>
+    <p>Tu es actuellement sur mon PorteFolio, sur celui ci, tu pourras y retrouver un résumé de mes compétences, les outils que j'utilise mais aussi les différents projets que j'ai réalisé. Spécialisé dans le Front-End , mais aussi dans le Back-end, je suis à même de réaliser un site web de A à Z </></p>
+    <div class="hidden">H</div>
   </div>
 </section>
 <section class="skills-column">
   <div class="developer">
-    <figure>
-      <img src="img/data/frontend.svg" alt="">
-    </figure>
-    <h1>Développement</h1>
-    <p>Lorem ipsum dolorLorem ipsum dolorLorem ipsum dolorLorem ipsum dolorLorem ipsum dolor</p>
-    <p>Things I enjoy designing:</p>
-    <p>Lorem ipsum dolorLorem ipsum dolor</p>
-    <p>Design Tools:</p>
-    <ul>
-      <li>Lorem ipsum dolor</li>
-      <li>Lorem ipsum dolor</li>
-      <li>Lorem ipsum dolor</li>
-      <li>Lorem ipsum dolor</li>
-      <li>Lorem ipsum dolor</li>
-      <li>Lorem ipsum dolor</li>
-      <li>Lorem ipsum dolor</li>
-    </ul>
+    <div class="head">
+      <figure>
+        <img src="img/data/code-illustration.svg" alt="">
+      </figure>
+      <h1>Développement</h1>
+      <p>Le développement pour moi, c'est donner vie à un projet unique.</p>
+    </div>
+    <div class="skills">
+      <h2>Language que je maitrise :</h2>
+      <p>HTML, CSS, PHP, SQL, Sass, JS</p>
+    </div>
+    <div class="tools">
+      <h3>Outils de Dev :</h3>
+      <ul>
+        <li>Atom</li>
+        <li>CakePHP</li>
+        <li>Bootstrap</li>
+        <li>Github</li>
+        <li>XAMPP</li>
+        <li>Trello</li>
+        <li>Wordpress</li>
+      </ul>
+    </div>
   </div>
-  <div class="Design">
-    <figure>
-      <img src="img/data/frontend.svg" alt="">
-    </figure>
-    <h1>Design</h1>
-    <p>Lorem ipsum dolorLorem ipsum dolorLorem ipsum dolorLorem ipsum dolorLorem ipsum dolor</p>
-    <p>Things I enjoy designing:</p>
-    <p>Lorem ipsum dolorLorem ipsum dolor</p>
-    <p>Design Tools:</p>
-    <ul>
-      <li>Lorem ipsum dolor</li>
-      <li>Lorem ipsum dolor</li>
-      <li>Lorem ipsum dolor</li>
-      <li>Lorem ipsum dolor</li>
-      <li>Lorem ipsum dolor</li>
-      <li>Lorem ipsum dolor</li>
-      <li>Lorem ipsum dolor</li>
-    </ul>
+  <div class="design">
+    <div class="head">
+      <figure>
+        <img src="img/data/design-illustration.svg" alt="">
+      </figure>
+      <h1>Design</h1>
+      <p>J'aime quand le rendu est professionnel, propre et minimaliste.</p>
+    </div>
+    <div class="skills">
+      <h2>Ce que je maitrise en Design :</h2>
+      <p>UI/UX Web & Mobile, Identité Graphique</p>
+    </div>
+    <div class="tools">
+      <h3>Outils de Design :</h3>
+      <ul>
+        <li>Adobe XD</li>
+        <li>Illustrator</li>
+        <li>Photoshop</li>
+        <li>Indesign</li>
+        <li>Canva</li>
+        <li>Stylos & Papier</li>
+        <li>Un Cerveau</li>
+      </ul>
+    </div>
   </div>
 </section>
 <section class="projects">
-  <h1>Mes récents projets</h1>
+  <h1>Mes projets</h1>
   <div class="box-project">
     <?php foreach ($projects as $project) { ?>
       <article class="">
