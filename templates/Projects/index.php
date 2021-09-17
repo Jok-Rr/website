@@ -14,10 +14,10 @@
 			<span class="m_scroll_arrows doi"></span>
 		</div>
 </a>
-  <figure class="svg-bottom">
-      <img src="img/data/wave-skills.svg" alt="">
-  </figure>
 </section>
+<figure class="svg-bottom">
+  <img src="/img/data/wave-skills.svg" alt="">
+</figure>
 <section id="skills-section" class="skills-section">
   <div class="skills-content">
     <h2>Hey, je m'appelle Tom, enchanté de te rencontrer.</h2>

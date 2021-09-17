@@ -54,8 +54,7 @@
 
       <?php if ($this->request->getAttribute('identity') == null) { ?>
 
-        <?= $this->Html->link('<i class="fas fa-user-alt" aria-hidden="true"></i>', ['controller' => 'Users', 'action' => 'login'], ['escape' => false, 'class' => ($this->templatePath == 'Users' && $this->template == 'login') ? 'active' : '']) ?>
-
+      
 
       <?php } else {
     if ($this->request->getAttribute('identity')->level == 'admin') { ?>
@@ -68,6 +67,7 @@
         <?php
 } ?>
     </div>
+
   </nav>
   <main class="main">
     <div class="container">
